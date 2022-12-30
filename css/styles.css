@@ -1,0 +1,381 @@
+/* Headers Headers Headers Headers Headers Headers Headers Headers Headers Headers */
+
+/* enligt uppgiften skulle h1 vara svart */
+h1 {
+    color: black;
+    padding: 60px 20px 20px 100px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+/* enligt uppgiften skulle h2 vara grå */
+h2 {
+    color: grey;
+    padding: 10px 10px 10px 100px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    /* set standard font*/
+}
+
+/* brödtexten var lite för liten så jag ökade med .1em */
+p {
+    font-size: 1.1em;
+}
+
+.p-border {
+    border-left: 5px solid #cea135;
+    border-radius: 4px;
+    margin-left: 100px;
+}
+
+hr {
+    margin-top: 60px;
+}
+
+
+/* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
+
+/* jag tycker om att ha en fixed navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #11122b;
+}
+
+/* vänsterjusterad */
+.navbar li {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 1%;
+}
+
+/* text formattering */
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+/* ändra färg vid hover */
+.navbar li:hover {
+    background-color: #cea135;
+}
+
+/* ändra storlek på hund ikon */
+.navbar img {
+    width: 30px;
+    height: 30px;
+    margin: -10px;
+    padding-left: 100px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+
+/* Hero-Paralax Hero-Paralax Hero-Paralax Hero-Paralax Hero-Paralax Hero-Paralax */
+.hero-section {
+    background-image: url(/images/zoo.jpg);
+    padding: 100px;
+    height: 400px;
+    /* Skapa paralax effekt */
+    background-attachment: fixed;
+    /* image flyttar inte upp eller ner */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* crops bild till skärm */
+}
+
+.hero-section>.top-heading {
+    padding: 1px 20px;
+    /* 1px top & bot, 20px left & right*/
+    background-color: #11122b;
+    color: #cbcbcb;
+    width: 290px;
+    border-radius: 4px;
+    /* runda hörn */
+    text-align: center;
+    font-size: 1.8em;
+    box-shadow: 0px 15px 20px rgba(46, 46, 46, 0.4);
+}
+
+.hero-section>.bottom-heading {
+    padding: 1px 20px;
+    /* 1px top & bot, 20px left & right*/
+    margin-top: 15px;
+    background-color: #cea135;
+    color: #11122b;
+    width: 130px;
+    border-radius: 4px;
+    /* runda hörn */
+    text-align: center;
+    font-size: 1.4em;
+    box-shadow: 0px 15px 20px rgba(46, 46, 46, 0.4);
+    box-shadow: inset 0px -16px 29px -8px rgba(0, 0, 0, 0.58);
+}
+
+/* Features Features Features Features Features Features Features Features Features */
+/* Våra djur Våra djur Våra djur Våra djur Våra djur Våra djur Våra djur Våra djur */
+/* Jag använder samma klassnamn så jag skulle slippa en del CSS dubblering */
+
+.features-section {
+    height: 400px;
+    background-color: #cea135;
+    border-top: 10px solid white;
+    color: #11122b;
+
+    display: flex;
+    justify-content: center;
+    /* Align vågrätt */
+    align-items: center;
+    /* Align lodrätt */
+
+    /* Lägg till en skugga - det här var lite klurigt */
+    /* https://www.cssmatic.com/box-shadow */
+    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+}
+
+
+/* jag skapar denna flexbox för att allt ska delas upp horisontelt */
+.features-section>.columns-wrapper {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* lite formattering */
+.features-section>.columns-wrapper>.column {
+    padding: 10px;
+    margin: 30px;
+    text-align: center;
+}
+
+/* Minska storleken på ikonerna */
+.features-section>.columns-wrapper>.column img {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+/* papegojan ikonen hade en konstig storlek - jag pillar med den här */
+#papegoja {
+    width: 125px;
+    height: 125px;
+    margin-bottom: -25px;
+}
+
+/* alla 3 kolumner har 3 element (ikon, rubrik, text)... här väljer jag den andra element som är rubriken */
+.features-section>.columns-wrapper>.column :nth-child(2) {
+    font-size: 1.5em;
+    font-weight: 900;
+    height: 50px;
+}
+
+/* alla 3 kolumner har 3 element (ikon, rubrik, text)... här väljer jag den tredje element som är brödtext */
+.features-section>.columns-wrapper>.column :nth-child(3) {
+    font-size: 1.2em;
+    height: 50px;
+}
+
+/* Att göra Att göra Att göra Att göra Att göra Att göra Att göra Att göra Att göra */
+.ToDo p {
+    padding-left: 10px;
+    margin-right: 100px;
+}
+
+/* Tables Tables Tables Tables Tables Tables Tables Tables Tables Tables Tables Tables */
+
+/* här skapar jag en grid med 2 lika breda kolumner */
+.tabell-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 30px;
+    margin-right: 100px;
+    margin-left: 100px;
+    align-items: center;
+}
+
+.tabell-wrapper>.tabell-text {
+    margin-top: 60px;
+}
+
+.tabell-wrapper>.tabell-text>.tabell-text-rubrik {
+    font-size: 200%;
+}
+
+table,
+th,
+td {
+    width: 65%;
+    margin-top: 30px;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    box-shadow: 0px 15px 20px rgba(46, 46, 46, 0.4);
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+.tabell img {
+    width: 40px;
+}
+
+/* Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps Maps */
+.maps-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 1em;
+    align-items: center;
+}
+
+.title-map {
+    font-size: 200%;
+}
+
+.address {
+    font-size: 1.1em;
+}
+
+.address-title {
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.telephone-text {
+    font-style: normal;
+}
+
+.google-maps {
+    height: 450px;
+    width: 100%;
+    border: 0;
+    box-shadow: 0px 15px 20px rgba(46, 46, 46, 0.4);
+}
+
+.unordered-list {
+    list-style-image: url('../images/check.svg');
+    padding-left: 25px;
+}
+
+/* Nyhetsbrev Nyhetsbrev Nyhetsbrev Nyhetsbrev Nyhetsbrev Nyhetsbrev Nyhetsbrev Nyhetsbrev */
+/* här skapar jag en grid med 2 lika breda kolumner */
+.nyhetsbrev {
+    width: 30%;
+    margin-top: 60px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.nyhetsbrev-titel {
+    width: 30%;
+    margin-top: 60px;
+    margin-left: 100px;
+    font-size: 200%;
+    text-align: center;
+}
+
+.nyhetsbrev input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.nyhetsbrev label {
+    font-weight: bold;
+}
+
+.nyhetsbrev span {
+    color: red;
+}
+
+.label-oblig {
+    display: block;
+    color: grey;
+    font-style: italic;
+    font-size: .6em;
+}
+
+#submit-button {
+    width: 5em;
+    height: 3em;
+    margin-top: 10px;
+    background: linear-gradient(to bottom, #cea135, #e4c473);
+
+    border: 0em;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0px 15px 20px rgba(46, 46, 46, 0.4);
+}
+
+.submit {
+    transition-duration: 0.4s;
+}
+
+#submit-button:hover {
+    background-color: #cea135;
+    color: #fff;
+    box-shadow: inset 0px -6px 16px -6px rgba(0, 0, 0, 0.58);
+
+}
+
+/* Footer  Footer  Footer  Footer  Footer  Footer  Footer  Footer  Footer  Footer  */
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #11122b;
+    display: flex;
+    justify-content: center;
+}
+
+.footer li {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 16px;
+}
+
+.footer li:hover {
+    background-color: #cea135;
+}
+
+.footer img {
+    width: 30px;
+    height: 30px;
+    margin: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.systementorWebDesign {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-right: 100px;
+    margin-bottom: 60px;
+    color: #11122b;
+    text-align: right;
+}
